@@ -12,4 +12,4 @@ jobs:
       - name: Build
         run: |
           BUILD_SCRIPT=$(realpath build.sh)
-          cd / && "$BUILD_SCRIPT"
+          cd / && bash "$BUILD_SCRIPT"
