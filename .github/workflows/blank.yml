@@ -1,0 +1,15 @@
+name: CI
+run-name: CI
+on: [workflow_dispatch]
+jobs:
+  Build-EL9-x86_64:
+    name: Build Toolchain (EL9, x86_64)
+    runs-on: ubuntu-latest
+    container: almalinux:9
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Build
+        run: |
+          BUILD_SCRIPT=$(realpath build.sh)
+          cd / && "$BUILD_SCRIPT"
