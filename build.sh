@@ -32,7 +32,7 @@ make ARCH="$KERNEL_ARCH" INSTALL_HDR_PATH="$PREFIX/$TARGET_TRIPLET" headers_inst
 # Binutils
 cd "$BUILDDIR"
 
-curl -fLO 'https://ftpmirror.gnu.org/gnu/binutils/binutils-2.44.tar.xz'
+curl -fLO 'https://ftp.gnu.org/gnu/binutils/binutils-2.44.tar.xz'
 tar xf binutils-2.44.tar.xz
 cd binutils-2.44
 
@@ -52,14 +52,14 @@ make install
 # ====================
 # GCC (compiler)
 cd "$BUILDDIR"
-curl -fLO 'https://ftpmirror.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.xz'
+curl -fLO 'https://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.xz'
 
 tar xf gcc-14.2.0.tar.xz
 cd gcc-14.2.0
 
-curl -fLO "https://ftpmirror.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz"
-curl -fLO "https://ftpmirror.gnu.org/gnu/mpfr/mpfr-4.2.1.tar.xz"
-curl -fLO "https://ftpmirror.gnu.org/gnu/mpc/mpc-1.3.1.tar.gz"
+curl -fLO "https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz"
+curl -fLO "https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.1.tar.xz"
+curl -fLO "https://ftp.gnu.org/gnu/mpc/mpc-1.3.1.tar.gz"
 
 mkdir gmp mpfr mpc
 tar xf "gmp-6.3.0.tar.xz" --strip-components 1 -C gmp
@@ -85,7 +85,7 @@ make install-gcc
 # ====================
 # GLIBC (headers)
 cd "$BUILDDIR"
-curl -fLO 'https://ftpmirror.gnu.org/gnu/glibc/glibc-2.41.tar.xz'
+curl -fLO 'https://ftp.gnu.org/gnu/glibc/glibc-2.41.tar.xz'
 
 tar xf glibc-2.41.tar.xz
 cd glibc-2.41
